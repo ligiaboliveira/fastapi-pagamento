@@ -1,0 +1,46 @@
+# Ambiente Virtual
+venv/
+.venv/
+
+# Arquivos de Configuração de Ambiente
+.env
+*.env
+
+# Cache Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Configurações do Editor (VS Code)
+.vscode/
+.idea/
+*.swp
+
+# Arquivos de Logs
+*.log
+logs/
+
+# Configuração de Banco de Dados
+alembic/versions/*.pyc
+
+# Arquivos de Cache e Compilação
+*.sqlite3
+*.db
+.DS_Store
+
+# Arquivos Temporários
+*.tmp
+*.bak
+
+# Arquivos de Testes
+.coverage
+htmlcov/
+pytest_cache/
+.tox/
+*.pytest_cache/
