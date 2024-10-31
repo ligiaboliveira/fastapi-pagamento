@@ -11,7 +11,7 @@ def get_db():
     try:
         yield db
     except Exception as e:
-        print(f"Error occurred while using the database: {e}")  # Log the error
+        print(f"Error occurred while using the database: {e}") 
         raise HTTPException(status_code=500, detail="Database connection error")
     finally:
         db.close()
@@ -25,7 +25,7 @@ def create_payment(payment: PaymentCreate, db: Session = Depends(get_db)):
         db.refresh(db_payment)
         return db_payment
     except Exception as e:
-        print(f"Error creating payment: {e}")  # Log the error
+        print(f"Error creating payment: {e}") 
         raise HTTPException(status_code=400, detail="Error creating payment")
 
 @router.get("/payments/", response_model=list[PaymentResponse])
@@ -34,7 +34,7 @@ def read_payments(skip: int = 0, limit: int = 10, db: Session = Depends(get_db))
         payments = db.query(Payment).offset(skip).limit(limit).all()
         return payments
     except Exception as e:
-        print(f"Error reading payments: {e}")  # Log the error
+        print(f"Error reading payments: {e}") 
         raise HTTPException(status_code=500, detail="Error retrieving payments")
 
 @router.get("/payments/{payment_id}", response_model=PaymentResponse)
@@ -45,5 +45,5 @@ def read_payment(payment_id: int, db: Session = Depends(get_db)):
             raise HTTPException(status_code=404, detail="Payment not found")
         return payment
     except Exception as e:
-        print(f"Error reading payment with ID {payment_id}: {e}")  # Log the error
+        print(f"Error reading payment with ID {payment_id}: {e}") 
         raise HTTPException(status_code=500, detail="Error retrieving payment")
