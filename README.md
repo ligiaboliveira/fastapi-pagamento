@@ -1,4 +1,4 @@
-## Fastapi Pagamento
+## FastAPI Payment
 
 ### Sobre o projeto
 
@@ -45,3 +45,6 @@ uvicorn app.main:app --reload
 
 **Acesse a aplicação em seu navegador web:**
 > http://127.0.0.1:8000/
+
+**Acesse a documentação:**
+> http://127.0.0.1:8000/docs
