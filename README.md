@@ -1,23 +1,47 @@
-# fastapi-pagamento
+## Fastapi Pagamento
 
-# Sobre o projeto
+### Sobre o projeto
 
 API de pagamento com fastAPI
 
-# Instalação e configuração
+---
 
-Clone o repositório: bash git clone https://github.com/seu-usuario/fastapi-pagamento.git
+### Instalação e configuração
 
-Navegue até o diretório do projeto: bash cd fastapi-pagamento
+**Clone o repositório:**
+```bash
+$ git clone https://github.com/seu-usuario/fastapi-pagamento.git
+```
 
-Crie um ambiente virtual (opcional, mas recomendado): bash python3 -m venv .venv
+**Navegue até o diretório do projeto:**
+```bash
+$ cd fastapi-pagamento
+```
 
-Ative o ambiente virtual: bash source .venv/bin/activate
+**Crie um ambiente virtual (opcional, mas recomendado):**
+```bash
+$ python3 -m venv .venv
+```
 
-Instale as dependências do projeto: bash pip install -r requirements.txt
+**Ative o ambiente virtual:**
+```bash
+$ source .venv/bin/activate
+```
 
-Inicie o servidor de desenvolvimento: bash uvicorn app.main:app --reload
+**Instale as dependências do projeto:**
+```bash
+$ pip install -r requirements.txt
+```
 
-Acesse a aplicação em seu navegador web:
+**Adicione as migrations**
+```bash
+$ python -m app.seed
+```
 
-http://127.0.0.1:8000/
+**Inicie o servidor de desenvolvimento:**
+```bash
+$ uvicorn app.main:app --reload
+```
+
+**Acesse a aplicação em seu navegador web:**
+> http://127.0.0.1:8000/
