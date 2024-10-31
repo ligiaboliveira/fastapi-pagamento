@@ -9,7 +9,7 @@ class UserResponse(BaseModel):
     name: str
 
     class Config:
-        orm_mode = True  # Enables compatibility with ORM models
+        orm_mode = True  
 
 class PaymentCreate(BaseModel):
     amount: int
