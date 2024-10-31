@@ -1,6 +1,5 @@
 # app/routes/payments.py
 from fastapi import APIRouter, HTTPException
-from app.schemas import PaymentRequest, PaymentResponse
 from random import randint
 
 router = APIRouter()
